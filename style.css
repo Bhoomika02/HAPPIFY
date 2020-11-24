@@ -1,3 +1,4 @@
+/*NAVBAR*/
 body{margin:0;
 	padding:0;
 	font-family: sans-serif;
@@ -48,8 +49,7 @@ body{margin:0;
 
 
 
-
-
+/*GALLERY*/
 * {box-sizing: border-box}
 .mySlides1, .mySlides2 {display: none}
 img {vertical-align: middle;}
@@ -96,35 +96,7 @@ img {vertical-align: middle;}
 
 
 
-
-
-
-
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
+/*ABOUT*/
 
 .about-section {
   padding: 1px;
@@ -150,7 +122,7 @@ html {
 
 
 
-
+/*BOOKINGS*/
 .accordion {
   background-color: black;
   color: white;
@@ -186,11 +158,7 @@ html {
 
 
 
-
-
-
-
-
+/*CONTACT*/
 .contact{
 	background-color: black;
 }
@@ -235,6 +203,7 @@ background-color: #dd4b39;
 
 
 
+/*REVIEW*/
 .review{
   text-align: center;
   background-color: black;
