@@ -13,7 +13,6 @@
   <a href="#">HOME</a>
   <a href="#">ABOUT $ SERVICES</a>
   <a href="#">CONTACT US</a>
-  <a href="#">FEEDBACK</a>
 </div>
 
 <span style="font-size:30px; cursor:pointer;" onclick="openNav()"><img src="Images/h.jpeg" style="width:80px;">
@@ -31,52 +30,56 @@ function closeNav() {
 
 
 
-<!-- Photo Grid -->
-<div class="row"> 
-    <img src="Images/5.jpeg" style="width:12%;height:13% ">
-    <img src="Images/4.jpg" style="width:15%;height:">
-    <img src="Images/3.jpeg" style="width:30%;height:">
-    <img src="Images/2.jpg" style="width:20%;height:">
-    <img src="Images/6.jpeg" style="width:11%;height:">
-    <img src="Images/7.jpg" style="width:10%;height:50%">
+
+
+
+
+
+
+<h2 style="text-align:center">Gallery</h2>
+
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="Images/1.jpg" style="width:100%">
   </div>
+
+  <div class="mySlides1">
+    <img src="Images/2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="Images/4.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
 </div>
 
+
 <script>
-// Get the elements with class="column"
-var elements = document.getElementsByClassName("column");
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
 
-// Declare a loop variable
-var i;
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
 
-// Full-width images
-function one() {
-    for (i = 0; i < elements.length; i++) {
-    elements[i].style.msFlex = "100%";  // IE10
-    elements[i].style.flex = "100%";
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
   }
+  x[slideIndex[no]-1].style.display = "block";  
 }
-
-// Two images side by side
-function two() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.msFlex = "50%";  // IE10
-    elements[i].style.flex = "50%";
-  }
-}
+</script><hr>
 
 
-// Add active class to the current button (highlight it)
-var header = document.getElementById("myHeader");
-var btns = header.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
+
 
 
 
@@ -135,18 +138,31 @@ for (var i = 0; i < btns.length; i++) {
 
 
 
-<ul>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">BOOK YOUR EVENTS IN 2 SIMPLE STEPS</a>
-    <div class="dropdown-content">
-      <a href="#">CHOOSE YOUR THEME(drivelink)</a>
-      <a href="#">FILL IN US HERE(order form)</a>
- 
-    </div>
-  </li>
-</ul>
-<hr>
 
+<button class="accordion">Book your events in 2 simple steps</button>
+<div class="panel">
+  <div class="theme"><button><a href="" >Choose your theme here</a></button></div>
+  <div class="form"><button><a href="" >Fill in us here</a></button></div>
+</div>
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 
 
 
@@ -188,6 +204,16 @@ for (var i = 0; i < btns.length; i++) {
 <li><a href="#" class="fa fa-instagram"></a></li>
 <li><a href="#" class="fa fa-envelope"></a></li>
 </div>
+
+
+
+
+<div class="review">
+  <h1><a href="" style="color: red; text-decoration: none; size: 10px;" >Review Us Here</a></h1>
+</div>
+
+
+
 </div>
 </body>
 </html> 
