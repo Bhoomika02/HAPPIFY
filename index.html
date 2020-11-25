@@ -95,9 +95,10 @@ function showSlides(n, no) {
 
 <!--book-->
 <a href="https://bit.ly/2RJ3AzH"><button class="order">Book Your Events Here</button></a>
+<!--drive-->
 <a href="https://drive.google.com/folderview?id=1lJKO1cX7GZYXdsnfwC-8qscKCQpxZ-0y"><button class="drive"><span>Suggestions on ur theme</span></button></a>
 <!--review-->
-<a href="https://bit.ly/3fR5qbK"><button class="review">Review Us</button></a><hr>
+<a href="https://bit.ly/3fR5qbK"><button class="review">Review Us Here</button></a><hr>
 </div>
 
 
@@ -113,7 +114,7 @@ function showSlides(n, no) {
   <div class="column">
     <div class="card">
       <div class="container">
-        <h2>what are we</h2>
+        <h2>What Are We</h2>
         <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -141,7 +142,7 @@ function showSlides(n, no) {
   <div class="column">
     <div class="card">
       <div class="container">
-        <h2>our team</h2>
+        <h2>Our Team</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -151,10 +152,69 @@ function showSlides(n, no) {
       </div>
     </div>
   </div>
-</div>
   <hr>
 
 
+
+
+
+  <!--loveus-->
+  <h2 style="padding-left:13%;">Why They Love Us</h2>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <p style="padding:10%">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo</p>
+</div>
+
+<div class="mySlides fade">
+  <p style="padding:10%">modo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est labo</p>
+</div>
+
+<div class="mySlides fade">
+ <p style="padding:10%">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.</p>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
 
 
